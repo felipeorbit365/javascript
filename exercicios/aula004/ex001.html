@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- Módulo A - Aula 04 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        window.alert('Minha primeira mensagem')
+        window.confirm('Está gostando de JS?')
+        window.prompt('Qual é seu nome?')
+    </script>
+</body>
+</html>
+
+<!--
+    Aula 4 – Criando o seu primeiro script
+    --------------------------------------
+
+    Os scripts devem ser carregados depois do código base. 
+    
+    A parte de JavaScript fica dentro da tag <body>, não fora, mas deve estar entre a tag <script> também para seu funcionamento. Também é possível criar scripts externos, mas isso não será feito por agora.
+
+    Os comandos em JavaScript, na maioria das vezes, são escritos com letras minúsculas
+
+---
+
+    COMANDO DE ALERTA - JANELA DE ALERTA
+    - window.alert()
+    - O comando também pode ser escrito de forma mais simplificada: alert()
+    - A mensagem deve ser escrita dentro dos parênteses, entre aspas simples
+
+---
+
+    COMANDO DE CONFIRMAÇÃO - JANELA DE CONFIRMAÇÃO
+    - window.confirm()
+    - Exibe algo parecido com um alerta, mas com opções de confirmação: OK e Cancel
+
+---
+
+    COMANDO DE CAIXA DE PERGUNTA AO USUÁRIO - JANELA DE PERGUNTA
+    - window.prompt()
+    - Exibe algo parecido com um alerta, mas permite com que o usuário digite uma resposta através do teclado
+    - É uma interação com o usuário, solicitando que ele digite algo
+
+---
+
+    ORDEM DA EXECUÇÃO DOS COMANDOS
+    - Os comandos são exercutados na ordem de como foram escritos no <script>
+    - A leitura é de cima para baixo
+
+---
+
+    Esses comandos ainda não possuem funcionalidades reais, já que não armazenaram nada. Para isso, é necessária a utilização de variáveis.
+
+    Os dados da janela de confirmação e da janela de pergunta, dessa forma, ainda não foram armazenados. 
+
+    O armazenamento desses dados acontece através das variáveis.
+-->
