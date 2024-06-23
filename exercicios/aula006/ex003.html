@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- Módulo B - Aula 06 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        var numero_um = Number(window.prompt('Digite um número: '))
+        var numero_dois = Number(window.prompt('Digite outro número: '))
+        var soma = numero_um + numero_dois
+        window.alert(`A soma entre ${numero_um} e ${numero_dois} é igual a ${soma}`)
+    </script>
+</body>
+</html>
+
+<!--
+    Aula 6 – Tratamento de dados
+--------------------------------
+
+    ADIÇÃO E CONCATENAÇÃO
+    - O window.prompt() retorna strings, então utilizar o sinal de adição [ + ] não funcionaria de acordo com o esperado, já que esse mesmo sinal também é utilizado para concatenação, justanente com o objetivo de unir suas strings
+    - Para realizar cálculos, então, é necessário fazer a conversão de tipo, para que assim a adição seja feita corretamente
+
+---
+
+    CONVERSÃO DE TIPO
+    - Conversão de tipo significa a mudança de um tipo de dado para outro tipo de dado
+  
+---    
+
+    CONVERSÃO DE TIPO - STRING PARA NÚMERO
+    - Number.parseInt(n) -> faz conversão de um número para um número inteiro
+    - Number.parseFloat(n) -> faz a conversão de um número para um número real, isto é, decimal
+    
+    parse
+    - Significa converter
+
+    Int
+    - Significa valor inteiro
+
+    Float
+    - Significa valor com ponto flutuante, decimal 
+
+
+    EXEMPLO
+    - Sem a conversão, caso a resposta do numero_um fosse 1 e a resposta do numero_dois fosse 2, o sistema incorretamente exibiria 12, concatenando as strings
+    - Com a conversão, o cálculo é feito da forma correta, exibindo 3
+    - Ou seja, a variável recebe a resposta do usuário no prompt, mas já convertido para um número (podendo ser inteiro ou real)
+
+---
+
+    CONVERSÃO DE TIPO - STRING PARA NÚMERO: MODO MAIS SIMPLIFICADO
+    - Number(n) -> o sistema define por conta própria se é inteiro ou real e faz a conversão do tipo. O JavaScript "decide", por conta própria, como vai tratar o dado de acordo com o valor que foi recebido 
+    - Se quiser efetivamente tratar como inteiro ou como real, o parse deve ser utilizado
+
+---
+
+    CONVERSÃO DE TIPO - NÚMERO PARA STRING
+    - String(n) -> entre parênteses fica o que deve ser convertido, fazendo assim a conversão para string
+    - n.toString() -> o que deve ser convertido deve ficar antes do .toString(), no lugar do n
+
+---
+
+    FORMATAÇÃO DE STRINGS
+    - Concatenação não é um modo tão prático para formatar strings, então a técnica Template Strings é uma alternativa muito melhor e que deve ser preferencialmente utilizada
+
+    TEMPLATE STRINGS - INTERPOLAÇÃO DE STRINGS
+    - `${}`
+    - A frase deve estar entre CRASES, não aspas simples
+    - O elemento a ser interpolado fica dentro de ${}
+    - A crase é a delimitação da Template String e ${} é o placeholder do elemento a ser interpolado
+    - Exemplo: `A soma dos valores é ${soma}` -> a variável soma é interpolada na string 
+    - É basicamente como o F-String de Python 
+-->

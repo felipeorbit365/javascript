@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!-- Módulo B - Aula 06 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        window.alert('É um grande prazer te conhecer, ' + nome)
+    </script>
+</body>
+</html>
+
+<!--
+    Aula 6 – Tratamento de dados
+--------------------------------
+
+    MANIPULAÇÃO DE DADOS
+    - Para fazer com que a resposta do usuário em window.prompt() seja armazenada, ela deve ser colocada em uma variável. 
+    No caso, o que for digitado no prompt, é armazenado na variável nome.
+
+    CONCATENAÇÃO 
+    - O sinal de mais [ + ] une uma string a outra, de modo com que a mensagem no alert consegue exibir o nome da resposta através da varíavel. 
+-->

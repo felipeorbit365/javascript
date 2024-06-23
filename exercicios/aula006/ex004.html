@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- Módulo B - Aula 06 -->
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de Strings</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}`)
+    </script>
+</body>
+</html>
+
+<!--
+    Aula 6 – Tratamento de dados
+--------------------------------
+
+    ATRIBUTOS E MÉTODOS DE STRING 
+    - O atributo ou método é colocado depois da string com um ponto [ . ] -> string.atributo ou string.metodo()
+
+    .length
+    - Atributo que indica o tamanho de uma string, quantas letras/caracteres a string tem
+
+    .toUpperCase()
+    - Método que faz com que todas as letras/caracteres da string passem a ser maiúsculas
+    
+    .toLowerCase()
+    - Método que faz com que todas as letras/caracteres da string passem a ser minúsculas
+ 
+---
+
+    document.write()
+    - Escreva no documento, é um comando que escreve na tela
+    - O que será escrito fica dentro dos parênteses
+
+    document.writeln()
+    - Tem a mesma função, mas pula a linha
+
+---
+
+    FORMATAÇÃO DE NÚMEROS
+    - Métodos que formatam números
+
+    .toFixed()
+    - Método que formata casas decimais de números
+    - Nos parênteses deve ser indicado o número de casas decimais desejado
+    - Exemplo: numero.toFixed(2) -> faz com que o valor na variável numero tenha duas casas decimais
+    
+    .replace('.', ',')
+    - Troca ponto [ . ] por vírgula [ , ]
+    - Números, em linguagens de programação, são escritos com ponto. Esse método faz com que uma substituição aconteça, de modo com que onde tinha ponto, passa a ter vírgula, seguindo a escrita do português brasileiro
+    - Exemplo: numero.toFixed(2).replace('.', ',') -> nesse caso, faz com que o valor na variável numero tenha duas casas decimais e que o ponto do valor seja substítuido por vírgula 
+
+    .toLocaleString('pt-br', {style: 'currency', currency:'BRL'})
+    - Método que faz com que o câmbio seja exibido da forma como se escreve em português brasileiro, na moeda do Brasil
+    - Permite que sejam exibidos números com ponto e vírgula, já que vírgulas representam os centavos e o ponto as outras casas, como o milhar
+    - .toLocaleString(), na sua forma usual, é um método que localiza a string por parte do mundo (idioma), entre as chaves ficam os atributos para fazer as devidas configurações 
+    - Exemplo: numero.toLocaleString('pt-br', {style: 'currency', currency:'BRL'}) -> uma variável numero de valor '1543.5', com essa alteração, passa a ser 'R$ 1.543,50' no navegador
+-->
