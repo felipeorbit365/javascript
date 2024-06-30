@@ -1,0 +1,77 @@
+<!DOCTYPE html> <!-- Módulo C - Aula 10 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
+
+<!--
+    Aula 10 – Eventos DOM
+--------------------------
+
+    DISPARANDO FUNÇÕES COM EVENTOS 
+
+    <div id="area" onclick="clicar()">
+    - Quando clicar em cima da <div>, já que é um evento onclick, dispara a função clicar()
+    - O bloco function clicar() só vai acontecer quando o evento onclick ocorrer
+
+    var a = window.document.getElementById('area')
+    - O objeto a está ligado diretamente a <div>  
+    
+    a.innerText = 'Clicou!'
+    - Quando clicar na <div>, cria um objeto chamado a. Esse objeto é uma ligação do objeto a do JavaScript com o elemento area na <div> do HTML. Então, o objeto muda o nome dele para 'Clicou!', que só acontece quando clicar efetivamente no elemento
+
+---
+
+    LISTENERS
+    - EventListener prestam atenção na ocorrência de eventos
+    - São colocados para que o HTML fique limpo, de modo com que apenas o JavaScript trate a ligação entre o HTML e o JavaScript para a ocorrência dos eventos
+
+    Exemplo:
+     
+    onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"
+    - Tudo isso estava na <div>, parte de HTML, mas foi removido
+
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+    - Substituem tudo o que estava dentro do HTML e agora trata no JavaScript
+-->
