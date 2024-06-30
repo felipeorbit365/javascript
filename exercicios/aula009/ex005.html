@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>
+
+<!--
+    Aula 9 – Introdução ao DOM
+--------------------------------
+
+    ADICIONANDO COMPONENTES COM DOM
+    - É possível adicionar componentes através do DOM
+    - Não é a melhor forma, mas é a mais simples
+    - Exemplo: window.document.write('Olá, Mundo!') -> escreve na tela
+
+    ACESSANDO ELEMENTOS COM DOM
+    - Com o DOM é possível acessar vários componentes
+    - Exemplo: window.document.write(window.document.URL) -> escreve na tela a URL, acessada através do DOM
+
+---
+    
+    SELEÇÃO E NAVEGAÇÃO POR ELEMENTOS
+
+    var p1 = window.document.getElementsByTagName('p')[0]
+    - Indica o primeiro parágrafo, já que ('p') seleciona todos parágrafos e [0] é o índice que indica que a seleção é correspondente somente ao primeiro
+
+    window.document.write(p1.innerText)
+    - innerText faz com que seja escrito o texto que está dentro do primeiro parágrafo
+    - Seleciona somente o texto, o conteúdo em si, não mantém formatação
+
+    window.document.write(p1.innerHTML)
+    - innerHTML faz com que seja escrito todo o HTML que está dentro do primeiro parágrafo
+    - Mantém as tags filhas
+    - Exemplo: um innerText não é capaz de manter a formatação de um negrito que foi feito com <strong>, já que se replica somente o conteúdo do texto, mas o innerHTML sim, pois é o HTML inteiro que está dentro
+
+    var d = window.document.querySelector('div.msg')
+    - Atribui a variável d a seleção da <div> de class "msg"
+
+---
+    
+    DIFERENÇA - CRIANDO OU NÃO CRIANDO VARIÁVEIS NA SELEÇÃO E NAVEGAÇÃO POR ELEMENTOS
+
+    Exemplo - com variáveis:
+        <div id="msg">Clique em mim</div>
+        <script>
+            var d = window.documentElementById('msg')
+            d.innerText = "Olá"
+        </script>
+    - Atribui a variável d a seleção da <div> de ID "msg"  
+    - Altera o texto da variável d para "Olá", mudando então a <div> com a identificação desse ID    
+    - Cria a variável e altera a <div> através dela   
+        
+    Exemplo - sem varíaveis:    
+      <div id="msg">Clique em mim</div>
+        <script>
+            window.document.getElementById('msg').innerText = "Olá"
+        </script>    
+    - Faz com que o elemento de ID "msg", isto é, a <div> correspondente, receba o texto "Olá"
+    - Não cria variáveis
+-->
