@@ -1,0 +1,32 @@
+<!DOCTYPE html> <!-- Módulo D - Aula 11 -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou Estrangeiro</title>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro?</h1>
+    Seu país: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resultado">
+
+    </div>
+    <script>
+        function verificar() {
+            var nacionalidade = window.document.getElementById('pais').value
+            var resultado = document.getElementById('resultado');
+            resultado.innerHTML = `<p>Vivendo em ${nacionalidade}</p>`
+            if (nacionalidade == 'Brasil') {
+                resultado.innerHTML += `<p>Você é Brasileiro!</p>`
+            } else {
+                resultado.innerHTML += `<p>Você é Estrangeiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!--
+Esse exercício foi resolvido por mim somente e não tem resolução, mas creio que esteja correto. A proposta era transformar o exercício 9 em HTML, já que foi feito originalmente em JavaScript.
+-->
