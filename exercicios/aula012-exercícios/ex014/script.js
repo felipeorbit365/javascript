@@ -26,7 +26,7 @@ function carregar() {
 
     var img = window.document.getElementById('imagem')
     - O objeto img tem relação com a foto de id "imagem" no HTML, fazendo a substituição de acordo
-    - O Guanabara não funcionou, mas acredito a imagem de id "imagem" na div de id "foto" atua como se fosse um placeholder
+    - O Guanabara não mencionou, mas acredito que a imagem de id "imagem" na div de id "foto" atua como se fosse um placeholder
 
     document.body.style.background 
     - Altera o fundo, acessando através do background no style
